@@ -1,0 +1,42 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+.car-shelf {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+.car {
+    border: 1px solid #ddd;
+    padding: 1em;
+    text-align: center;
+    width: 200px; /* Defina a largura desejada para cada carro */
+    margin: 0 1em; /* Adicione margens entre os carros conforme necessário */
+}
+
+.car img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -13,7 +13,7 @@ if(isset($_POST['submit']) && !empty($_POST['cpf']) && !empty($_POST['senha'])) 
 
     if ($result->num_rows > 0) {
         // Usuário autenticado, faça o que precisar aqui
-        echo "Login bem-sucedido!";
+        header("Location: home.html");
     } else {
         // Usuário não autenticado
         echo "Login falhou. CPF ou senha incorretos.";
