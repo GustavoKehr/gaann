@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login p input {
+    padding: 1.2rem;
+    margin-top: .2rem;
+}
+
+button {
+    padding: 1.2rem;
+    margin-top: .2rem;
+    background-color: lightskyblue;
+    color: black;
+    border: none;
+    border-radius: 5px;
+}
