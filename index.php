@@ -1,26 +1,36 @@
 <?php
-    if(isset($_POST['submit'])) {
-        include_once('config.php');
+if (isset($_POST['submit'])) {
+    include_once('config.php');
 
-        $nome = mysqli_real_escape_string($conexao, $_POST['nome']);
-        $idade = mysqli_real_escape_string($conexao, $_POST['idade']);
-        $cpf = mysqli_real_escape_string($conexao, $_POST['cpf']);
-        $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
-        $telefone = mysqli_real_escape_string($conexao, $_POST['telefone']);
-        
-        $stmt = $conexao->prepare("INSERT INTO clientes (nome, idade, cpf, senha, telefone) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("sissi", $nome, $idade, $cpf, $senha, $telefone);
+    $nome = mysqli_real_escape_string($conexao, $_POST['nome']);
+    $idade = mysqli_real_escape_string($conexao, $_POST['idade']);
+    $cpf = mysqli_real_escape_string($conexao, $_POST['cpf']);
+    $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
+    $telefone = mysqli_real_escape_string($conexao, $_POST['telefone']);
 
-        if ($stmt->execute()) {
-            echo "Cadastro realizado com sucesso.";
-        } else {
-            echo "Erro ao cadastrar: " . $stmt->error;
-        }
+    // Remover caracteres não numéricos do CPF
+    $cpf = preg_replace('/[^0-9]/', '', $cpf);
 
-        $stmt->close();
-        $conexao->close();
+    // Verificar se o CPF possui 11 dígitos
+    if (strlen($cpf) !== 11) {
+        echo "CPF deve ter 11 dígitos.";
+        exit();
     }
+
+    $stmt = $conexao->prepare("INSERT INTO clientes (nome, idade, cpf, senha, telefone) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("sissi", $nome, $idade, $cpf, $senha, $telefone);
+
+    if ($stmt->execute()) {
+        echo "Cadastro realizado com sucesso.";
+    } else {
+        echo "Erro ao cadastrar: " . $stmt->error;
+    }
+
+    $stmt->close();
+    $conexao->close();
+}
 ?>
+
 
 
 <!DOCTYPE html>
@@ -30,6 +40,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <form action="index.php" method="POST">
