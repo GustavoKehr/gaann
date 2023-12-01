@@ -50,8 +50,8 @@ if (isset($_POST['submit'])) {
             <p><input type="password" name="senha" id="senha  " placeholder="senha" required></p>
             <p><input type=" text" name="telefone" id="telefone" placeholder="telefone" required></p>
             <p>
-                <button type="submit" name="submit" id="submit">LOGIN</button>
-                <button type="text" name="irLogin"><a href="testLogin.php">HOME</a></button>
+                <button type="submit" name="submit" id="submit">CADASTRAR</button>
+                <button type="text" name="irLogin"><a href="testLogin.php">LOGIN</a></button>
             </p>
 
         </div>
