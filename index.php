@@ -31,8 +31,6 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -51,7 +49,11 @@ if (isset($_POST['submit'])) {
             <p><input type="text" name="cpf" id="cpf" placeholder="cpf" required></p>
             <p><input type="password" name="senha" id="senha  " placeholder="senha" required></p>
             <p><input type=" text" name="telefone" id="telefone" placeholder="telefone" required></p>
-            <p><button type="submit" name="submit" id="submit">ENVIAR</button></p>
+            <p>
+                <button type="submit" name="submit" id="submit">LOGIN</button>
+                <button type="text" name="irLogin"><a href="testLogin.php">HOME</a></button>
+            </p>
+
         </div>
     </form>
 

@@ -28,6 +28,12 @@
         outline: none;
         font-size: 15px;
         border-radius: 10px;
+        margin-bottom: .5rem;
+
+    }
+
+    button {
+        text-decoration: none;
     }
 
     .inputSubmit {
@@ -36,14 +42,13 @@
         padding: 15px;
         width: 100%;
         border-radius: 10px;
-        color: white;
         font-size: 15px;
-
     }
 
     .inputSubmit:hover {
         background-color: deepskyblue;
         cursor: pointer;
+
     }
     </style>
 </head>
@@ -55,7 +60,8 @@
             <br><br>
             <input type="password" name="senha" placeholder="SENHA">
             <br><br>
-            <input type="submit" name="submit" value="Enviar" class="inputSubmit">
+            <input type="submit" name="submit" value="LOGIN" class="inputSubmit">
+            <button class="inputSubmit"><a href="index.php">CADASTRE-SE</a></button>
         </form>
     </div>
 </body>
