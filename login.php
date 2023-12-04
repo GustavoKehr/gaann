@@ -8,11 +8,10 @@
     <style>
     body {
         font-family: Arial, Helvetica, sans-serif;
-        background-image: linear-gradient(45deg, cyan, yellow);
     }
 
     div {
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(0, 0, 0, 1);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -37,7 +36,7 @@
     }
 
     .inputSubmit {
-        background-color: dodgerblue;
+        background-color: rgb(158, 167, 42);
         border: none;
         padding: 15px;
         width: 100%;
@@ -45,8 +44,17 @@
         font-size: 15px;
     }
 
+    .inputSubmit a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .inputSubmit a:hover {
+        color: white;
+    }
+
     .inputSubmit:hover {
-        background-color: deepskyblue;
+        color: white;
         cursor: pointer;
 
     }

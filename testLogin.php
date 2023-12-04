@@ -5,17 +5,17 @@ if(isset($_POST['submit']) && !empty($_POST['cpf']) && !empty($_POST['senha'])) 
     $cpf = $_POST['cpf'];
     $senha = $_POST['senha'];
 
-    $stmt = $conexao->prepare("SELECT * FROM clientes WHERE cpf = ? and senha = ?");
+    $stmt = $conexao->prepare("SELECT * FROM clientes cpfWHERE  = ? and senha = ?");
     $stmt->bind_param("ss", $cpf, $senha);
 
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        // Usuário autenticado, faça o que precisar aqui
+        
         header("Location: home.html");
     } else {
-        // Usuário não autenticado
+        
         echo "Login falhou. CPF ou senha incorretos.";
     }
 

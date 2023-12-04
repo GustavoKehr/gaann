@@ -42,18 +42,22 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
     <form action="index.php" method="POST">
-        <div class="login">
+        <div class="welcome">
+            <h1 class="pptitulo">Bem-vindo a Journey to Heaven</h1>
+            <h3 class="pp">Acesse sua conta ou crie uma nova conta para utilizar o nosso site!</h3>
+            <button type="text" name="irLogin" class="botaologin"><a href="testLogin.php">LOGIN</a></button>
+            <div class="login">
 
-            <p><input type="text" name="nome" id="nome" placeholder="nome" required></p>
-            <p><input type="number" name="idade" id="idade" placeholder="idade" required></p>
-            <p><input type="text" name="cpf" id="cpf" placeholder="cpf" required></p>
-            <p><input type="password" name="senha" id="senha  " placeholder="senha" required></p>
-            <p><input type=" text" name="telefone" id="telefone" placeholder="telefone" required></p>
-            <p>
-                <button type="submit" name="submit" id="submit">CADASTRAR</button>
-                <button type="text" name="irLogin"><a href="testLogin.php">LOGIN</a></button>
-            </p>
-
+                <h2>Registrar Usuário</h2>
+                <p><input type="text" name="nome" id="nome" placeholder="NOME" required></p>
+                <p><input type="number" name="idade" id="idade" placeholder="IDADE" required></p>
+                <p><input type="text" name="cpf" id="cpf" placeholder="CPF" required></p>
+                <p><input type="password" name="senha" id="senha  " placeholder="SENHA" required></p>
+                <p><input type=" text" name="telefone" id="telefone" placeholder="TELEFONE" required></p>
+                <p class="botoes">
+                    <button type="submit" name="submit" id="submit" class="cadastrar">CADASTRAR</button>
+                </p>
+            </div>
         </div>
     </form>
 

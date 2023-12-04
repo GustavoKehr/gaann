@@ -2,28 +2,110 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(158, 167, 42);
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 563px;
+    padding: 5rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.welcome h1, h3 {
+    color: white;
+}
+
+.cadastrar {
+    cursor: pointer;
+}
+
+.pp {
+    margin-top: 120px;
+}
+
+.pptitulo {
+    margin-top: 2rem;
+}
+
+.ppredes {
+    margin-top: 100px
+    }
+
+.botaologin {
+    background-color: black;
+    color: white;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.botaologin a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.ppredes a {
+    text-decoration: none;
+    color: white;
+}
+
+.ppredes ul li {
+    display: inline;
 }
 
 .login {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 150%;
     transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 5rem;
+    border-radius: 0 15px 15px 0px
+
 }
 
 .login p input {
     padding: 1.2rem;
-    margin-top: .2rem;
+    margin-top: .5rem;
+}
+
+.login h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.botoes button {
+    width: 26rem
+}
+
+.botoes a {
+    text-decoration: none;
+    color: black;
 }
 
 button {
     padding: 1.2rem;
-    margin-top: .2rem;
-    background-color: lightskyblue;
+    margin-top: .5rem;
+    background-color: rgb(158, 167, 42);
     color: black;
     border: none;
     border-radius: 5px;
-    
 } 
 
 button .submit {
@@ -32,5 +114,9 @@ button .submit {
 
 input {
     text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    border-radius: .5rem;
+    width: 26rem
 }
-
